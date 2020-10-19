@@ -10,6 +10,5 @@ class Song < ActiveRecord::Base
     artist = Artist.new
     artist.name = "Drake"
     song.artist = artist
-
   end
 end
