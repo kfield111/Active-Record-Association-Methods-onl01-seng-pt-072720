@@ -13,6 +13,5 @@ class Song < ActiveRecord::Base
     new_artist.name = "Drake"
     new_artist.save
     self.artist = new_artist
-    binding.pry
   end
 end
