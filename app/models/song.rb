@@ -11,6 +11,7 @@ class Song < ActiveRecord::Base
   def drake_made_this
     new_artist = Artist.new
     new_artist.name = "Drake"
+    new_artist.save
     self.artist = new_artist
     binding.pry
   end
