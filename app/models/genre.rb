@@ -11,6 +11,9 @@ class Genre < ActiveRecord::Base
   end
 
   def all_artist_names
-    self.artists.all
+    array = self.artists.all.each do |t|
+      t.name
+    end
+    array
   end
 end
