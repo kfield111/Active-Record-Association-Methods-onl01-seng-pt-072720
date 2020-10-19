@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song < ActiveRecord::Base
   belongs_to :artist
   belongs_to :genre
@@ -10,5 +12,6 @@ class Song < ActiveRecord::Base
     artist = Artist.new
     artist.name = "Drake"
     self.artist = artist
+    binding.pry
   end
 end
