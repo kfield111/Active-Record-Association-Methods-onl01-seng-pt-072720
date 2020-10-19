@@ -9,9 +9,9 @@ class Song < ActiveRecord::Base
   end
 
   def drake_made_this
-    new_artist = Artist.new
-    new_artist.name = "Drake"
-    new_artist.save
+    new_artist = Artist.find_or_create_by do |t|
+      t.name = "Drake"
+      t.save
     self.artist = new_artist
   end
 end
